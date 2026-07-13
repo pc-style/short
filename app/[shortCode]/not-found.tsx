@@ -3,21 +3,21 @@ import { AlertCircle, Home } from "lucide-react";
 
 export default function NotFound() {
     return (
-        <main className="min-h-screen bg-black text-white flex items-center justify-center p-6">
+        <main className="flex min-h-screen items-center justify-center p-6 text-foreground">
             <div className="max-w-md text-center space-y-8">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-red-500/10 border border-red-500/50 rounded-full">
-                    <AlertCircle className="w-10 h-10 text-red-500" />
+                <div className="inline-flex h-16 w-16 items-center justify-center rounded-lg border border-hairline">
+                    <AlertCircle className="h-7 w-7 text-accent" />
                 </div>
 
                 <div className="space-y-4">
-                    <h1 className="text-4xl font-black uppercase tracking-tight">
-                        <span className="text-red-500">404</span>
+                    <h1 className="text-4xl font-semibold tracking-tight">
+                        <span className="text-accent">404</span>
                         <br />
-                        <span className="text-white text-2xl">LINK_NOT_FOUND</span>
+                        <span className="text-2xl text-foreground">link not found</span>
                     </h1>
 
-                    <p className="text-gray-500 font-mono text-sm leading-relaxed">
-                        The requested short link does not exist or has been removed from our
+                    <p className="text-sm leading-relaxed text-muted">
+                        the requested short link does not exist or has been removed from the
                         system.
                     </p>
                 </div>
@@ -25,16 +25,13 @@ export default function NotFound() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
                         href="/"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#ff00ff] text-black font-bold uppercase tracking-wide text-sm transition-all hover:bg-white hover:shadow-[0_0_20px_#ff00ff] active:scale-95"
+                        className="inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-accent-dim to-accent px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90 active:scale-[0.98]"
                     >
                         <Home className="w-4 h-4" />
-                        CREATE_NEW_LINK
+                        create a new link
                     </Link>
                 </div>
 
-                <p className="text-gray-700 text-xs font-mono uppercase tracking-wider">
-                    ERROR_CODE: LINK_EXPIRED_OR_INVALID
-                </p>
             </div>
         </main>
     );

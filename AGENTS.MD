@@ -10,11 +10,12 @@ This project follows the **pcstyle** high-performance stack and aesthetic.
 - **Animation**: Framer Motion
 - **Icons**: Lucide React
 
-## 🎨 Design System: "Cybernetic Minimalism"
-- **Colors**: Absolute Black (#000000) & Neon Magenta (#ff00ff)
-- **Effects**: Glassmorphism, CRT Overlays, Matrix backgrounds
-- **Typography**: JetBrains Mono with aggressive tracking
-- **Identity**: Protocol: SHORT-777-ALPHA
+## 🎨 Design System: pcstyle.dev
+Matches the home site (pcstyle.dev): quiet, narrow single-column mono layout.
+- **Colors**: background #0a0a0b, text #e8e6e3, muted #8a8781, faint #55524d, hairline #26262a, accent #e04fb0, accent-dim #8c1862
+- **Typography**: JetBrains Mono everywhere, lowercase copy, no letter-spacing tricks
+- **Motifs**: `~/pcstyle` wordmark, `→` eyebrow prompts, `##` section labels with hairline rules, pink-bordered tag pills, magenta→pink gradient CTA
+- **No**: CRT overlays, matrix backgrounds, custom cursors, neon glow, uppercase tracking
 
 ## 📁 File Structure
 ```
@@ -23,14 +24,10 @@ short/
 │   ├── [shortCode]/
 │   │   ├── page.tsx         # Redirect handler
 │   │   └── not-found.tsx    # 404 for invalid links
-│   ├── globals.css          # Cyberpunk styles
+│   ├── globals.css          # pcstyle.dev theme tokens
 │   ├── layout.tsx           # Root layout with Convex
 │   └── page.tsx             # Main shortener page
 ├── components/
-│   ├── ui/
-│   │   ├── CRTOverlay.tsx
-│   │   ├── MatrixBackground.tsx
-│   │   └── NeuralCursor.tsx
 │   ├── ConvexClientProvider.tsx
 │   └── LinkShortener.tsx    # Main component
 └── convex/

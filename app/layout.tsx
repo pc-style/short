@@ -2,33 +2,30 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
-import { NeuralCursor } from "@/components/ui/NeuralCursor";
-import { CRTOverlay } from "@/components/ui/CRTOverlay";
-import { MatrixBackground } from "@/components/ui/MatrixBackground";
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  weight: ["100", "400", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "S.PCSTYLE // LINK_SHORTENER",
-  description: "Cybernetic URL Compression Protocol - pcstyle",
+  title: "~/s · pcstyle",
+  description: "short links for pcstyle.dev.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "S.PCSTYLE // LINK_SHORTENER",
-    description: "Cybernetic URL Compression Protocol - pcstyle",
+    title: "~/s · pcstyle",
+    description: "short links for pcstyle.dev.",
     url: "https://s.pcstyle.dev",
-    siteName: "S.PCSTYLE",
+    siteName: "s.pcstyle.dev",
     images: [
       {
         url: "https://og.pcstyle.dev/api/og?title=LINK%20SHORTENER&subtitle=Cybernetic%20URL%20Compression&icon=link&theme=magenta",
         width: 1200,
         height: 630,
-        alt: "Link Shortener Preview",
+        alt: "s.pcstyle.dev",
       },
     ],
     locale: "en_US",
@@ -36,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "S.PCSTYLE // LINK_SHORTENER",
-    description: "Cybernetic URL Compression Protocol - pcstyle",
+    title: "~/s · pcstyle",
+    description: "short links for pcstyle.dev.",
     images: ["https://og.pcstyle.dev/api/og?title=LINK%20SHORTENER&subtitle=Cybernetic%20URL%20Compression&icon=link&theme=magenta"],
   },
 };
@@ -49,13 +46,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jetbrainsMono.variable} antialiased bg-black`}>
-        <ConvexClientProvider>
-          <MatrixBackground />
-          <CRTOverlay />
-          <div className="relative z-10">{children}</div>
-          <NeuralCursor />
-        </ConvexClientProvider>
+      <body className={`${jetbrainsMono.variable} antialiased`}>
+        <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
   );
